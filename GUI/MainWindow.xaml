@@ -1,0 +1,51 @@
+﻿<Window x:Class="GUI.Calculator"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GUI"
+        mc:Ignorable="d"
+        Title="Калькулятор" Height="600" Width="400"
+        Background="DimGray">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0*"/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <TextBox Grid.ColumnSpan="4" Grid.Row="1" FontSize="30"
+            Background="LightGray" Foreground="Black" Margin="5,10" x:Name="Input" PreviewTextInput="ValidateTextBox" BorderThickness="3" BorderBrush="Transparent"/>
+        <Button FontSize="20" FontWeight="Bold" Foreground="White" Content="+" Margin="0.5" Grid.Row="2" Background="Black" Click="GenericButton"/>
+        <Button FontSize="20" FontWeight="Bold" Foreground="White" Content="7" Margin="0.5" Grid.Row="3" Background="Black" Click="GenericButton"/>
+        <Button FontSize="20" FontWeight="Bold" Foreground="White" Content="4" Margin="0.5" Grid.Row="4" Background="Black" Click="GenericButton"/>
+        <Button FontSize="20" FontWeight="Bold" Foreground="White" Content="1" Margin="0.5" Grid.Row="5" Background="Black" Click="GenericButton"/>
+
+        <Button FontSize="20" FontWeight="Bold" Foreground="White" Content="-" Grid.Column="1" Margin="0.5" Grid.Row="2" Background="Black" Click="GenericButton"/>
+        <Button FontSize="20" FontWeight="Bold" Foreground="White" Content="8" Grid.Column="1" Margin="0.5" Grid.Row="3" Background="Black" Click="GenericButton"/>
+        <Button FontSize="20" FontWeight="Bold" Foreground="White" Content="5" Grid.Column="1" Margin="0.5" Grid.Row="4" Background="Black" Click="GenericButton"/>
+        <Button FontSize="20" FontWeight="Bold" Foreground="White" Content="2" Grid.Column="1" Margin="0.5" Grid.Row="5" Background="Black" Click="GenericButton"/>
+
+        <Button FontSize="20" FontWeight="Bold" Foreground="White" Content="*" Grid.Column="2" Margin="0.5" Grid.Row="2" Background="Black" Click="GenericButton"/>
+        <Button FontSize="20" FontWeight="Bold" Foreground="White" Content="9" Grid.Column="2" Margin="0.5" Grid.Row="3" Background="Black" Click="GenericButton"/>
+        <Button FontSize="20" FontWeight="Bold" Foreground="White" Content="6" Grid.Column="2" Margin="0.5" Grid.Row="4" Background="Black" Click="GenericButton"/>
+        <Button FontSize="20" FontWeight="Bold" Foreground="White" Content="3" Grid.Column="2" Margin="0.5" Grid.Row="5" Background="Black" Click="GenericButton"/>
+
+        <Button FontSize="20" FontWeight="Bold" Foreground="White" Content="/" Grid.Column="3" Margin="0.5" Grid.Row="2" Background="Black" Click="GenericButton"/>
+        <Button FontSize="20" FontWeight="Bold" Foreground="White" Content="%" Grid.Column="3" Margin="0.5" Grid.Row="3" Background="Black" Click="GenericButton"/>
+        <Button FontSize="20" FontWeight="Bold" Foreground="White" Content="Перевод" Grid.Column="3" Margin="0.5" Grid.Row="4" Background="Black" Click="Translate"/>
+        <Button FontSize="20" FontWeight="Bold" Foreground="White" Content="Сброс" Grid.Column="3" Margin="0.5" Grid.Row="5" Background="Black" Click="Reset"/>
+
+        <Button FontSize="20" FontWeight="Bold" Foreground="White" Content="=" Grid.ColumnSpan="3" Margin="0.5" Grid.Row="6" Background="Black" Click="Calculate"/>
+        <Button FontSize="20" FontWeight="Bold" Foreground="White" Content="История" Grid.Column="4" Margin="0.5" Grid.Row="6" Background="Black" Click="ShowHistory"/>
+    </Grid>
+</Window>
